@@ -15,11 +15,9 @@ export default (server, { enableNonce = true, enableCSP = true }) => {
 			defaultSrc: [ '"self"' ],
 			scriptSrc: [
 				"'self'",
-				(req, res) => `nonce-${res.locals.nonce}`,
-				process.env.NODE_ENV === 'development'
-					? '"unsafe-eval"'
-					: ''
-			].filter(value => value !== '')m
+				(req, res) => `'nonce-${res.locals.nonce}'`,
+				process.env.NODE_ENV === 'development' ? "'unsafe-eval'" : ""
+			].filter(value => value !== ''),
 			styleSrc: [ '"self"', '"unsafe-inline"', 'blob:' ],
 			imgSrc: [ '"self"', 'data:' ],
 			fontSrc: [ '"self"', 'data:' ],
@@ -31,7 +29,7 @@ export default (server, { enableNonce = true, enableCSP = true }) => {
 	if (enableCSP) {
 		server.use(helmet.contentSecurityPolicy(cspConfig));
 	}
-	
+
 	server.disable('x-powered-by');
 	server.use(parameterProtection());
 	server.use(helmet.xssFilter());

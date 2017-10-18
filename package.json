@@ -1,7 +1,7 @@
 {
 	"name": "frost-server",
 	"description": "A small express server used to easily start projects",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"author": {
 		"name": "Forrest Collins",
 		"email": "forrdev.com",
@@ -15,6 +15,7 @@
 	"dependencies": {
 		"body-parser": "^1.18.2",
 		"cookie-parser": "^1.4.3",
+		"dotenv": "^4.0.0",
 		"express": "^4.16.2",
 		"helmet": "^3.9.0",
 		"hpp": "^0.2.2",
