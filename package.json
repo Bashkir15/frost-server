@@ -1,0 +1,29 @@
+{
+	"name": "frost-server",
+	"description": "A small express server used to easily start projects",
+	"version": "0.1.0",
+	"author": {
+		"name": "Forrest Collins",
+		"email": "forrdev.com",
+		"url": "forrdev.com"
+	},
+	"main": "lib/index.js",
+	"license": "MIT",
+	"scripts": {
+		"build": "rimraf lib && node build.js"
+	},
+	"dependencies": {
+		"body-parser": "^1.18.2",
+		"cookie-parser": "^1.4.3",
+		"express": "^4.16.2",
+		"helmet": "^3.9.0",
+		"hpp": "^0.2.2",
+		"pretty-error": "^2.1.1",
+		"uuid": "^3.1.0"
+	},
+	"devDependencies": {
+		"rimraf": "^2.6.2",
+		"rollup": "^0.50.0",
+		"rollup-plugin-commonjs": "^8.2.3"
+	}
+}
