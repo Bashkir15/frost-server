@@ -1,3 +1,7 @@
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 export { default as createCore } from './core';
 export { default as createError } from './error';
 export { default as createFallback } from './fallback';
